@@ -1,0 +1,64 @@
+@h: 25px;
+.ComponentBar{
+    .itemWrapper{
+        height: @h;
+        margin-bottom: 10px;
+        text-align: center;
+        margin-right: 10px;
+        margin-top: 30px;
+        .name{
+            float: left;
+            height: @h;
+            width: 40px;
+            line-height: @h;
+            
+        }    
+        .loadWrapper{
+            float: left;
+            height: @h;
+            margin-right: 10px;
+            .loadInner{
+                width: 0%;
+                opacity: 0;
+                height: @h;
+                border-radius: 10%;
+                transition: all 1s ease-in-out;
+            }
+            
+        }
+        .percent{
+            float: left;
+            height: @h;
+            transition: all 1s ease-in-out 1s;
+            opacity: 0;
+        }
+    }
+}
+
+
+.load {
+    .itemWrapper{
+        .loadWrapper{
+            .loadInner{
+                width: 100%;
+                opacity: 1;
+            }
+        }
+        .percent{
+            opacity: 1;
+        }
+    }
+}
+.leave {
+    .itemWrapper{
+        .loadWrapper{
+            .loadInner{
+                width: 0%;
+                opacity: 0;
+            }
+        }
+        .percent{
+            opacity: 0;
+        }
+    }
+}
